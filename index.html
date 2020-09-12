@@ -63,13 +63,13 @@
                 <thead>
                   <tr>
                     <th scope="col">Monthly Payment</th>
-                    <th scope="col">Number of Months to 20% Equity</th>
+                    <th scope="col">Time to Reach 20% Equity</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="payment in paymentsData">
                     <th scope="row">${{ payment.monthlyPayment }}</th>
-                    <td>{{ payment.numberOfPayments }}</td>
+                    <td>{{ payment.payoffYears }} years {{ payment.payoffMonths }} months</td>
                   </tr>
                 </tbody>
               </table>

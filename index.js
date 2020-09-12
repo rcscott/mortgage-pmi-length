@@ -80,9 +80,14 @@ var app = new Vue({
           currentLTV = mortgageBalance / this.homeValue;
         }
 
+        const payoffYears = Math.floor(paymentCount / 12);
+        const payoffMonths = paymentCount % 12;
+
         return {
           monthlyPayment: paymentAmount,
-          numberOfPayments: paymentCount
+          numberOfPayments: paymentCount,
+          payoffYears: payoffYears,
+          payoffMonths: payoffMonths,
         };
       }.bind(this));
     },
